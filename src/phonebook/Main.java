@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 /**
  * Classe Principal
- *
  * @author Victtor da Silva Mendes - RA: 22.217.024-3
  */
 public class Main {
@@ -23,7 +22,6 @@ public class Main {
 
     /**
      * Função que printa todas pessoas e seus telefones
-     *
      * @param arr ArrayList com todas as pessoas
      */
     public static void printPhoneBook(ArrayList<PhoneBook> arr) {
@@ -35,7 +33,6 @@ public class Main {
 
     /**
      * Função que verifica se um nome está na lista
-     *
      * @param arr ArrayList com todas as pessoas
      * @param nome nome que vai se procurar
      * @return indice em que se encontra a pessoa procurada, ou -1 se não foi
@@ -52,7 +49,6 @@ public class Main {
 
     /**
      * Função main
-     *
      * @param args args
      */
     public static void main(String[] args) {
