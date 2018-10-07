@@ -7,8 +7,8 @@ package phonebook;
 public class PhoneBook {
 	/**
 	 * Construtor da classe
-	 * @param nome Nome da pessoa
-	 * @param telefone Telefone da pessoa
+	 * @param nome nome da pessoa
+	 * @param telefone telefone da pessoa
 	 */
 	public PhoneBook(String nome, String telefone) {
 		this.nome = nome;
@@ -23,14 +23,14 @@ public class PhoneBook {
 	}
 	/**
 	 * getter
-	 * @return Nome da pessoa
+	 * @return nome da pessoa
 	 */
 	public String getNome() {
 		return nome;
 	}
 	/**
 	 * getter
-	 * @return Telefone da pessoa
+	 * @return telefone da pessoa
 	 */
 	public String getTelefone() {
 		return telefone;

@@ -32,7 +32,7 @@ public class Main {
 	/**
 	 * Função que verifica se um nome está na lista
 	 * @param arr ArrayList com todas as pessoas
-	 * @param nome Nome que vai se procurar
+	 * @param nome nome que vai se procurar
 	 * @return indice em que se encontra a pessoa procurada, ou -1 se não foi encontrada
 	 */
 	public static int containsName(ArrayList<PhoneBook> arr, String nome) {
