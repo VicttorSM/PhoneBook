@@ -13,7 +13,7 @@ public class Main {
      * Função que printa o menu de opções
      */
     public static void printTela() {
-        System.out.println("Entre com uma das seguintes opções:");
+        System.out.println("\nEntre com uma das seguintes opções:");
         System.out.println("n [nova entrada]");
         System.out.println("d [apaga registro da agenda]");
         System.out.println("p [imprime toda a agenda]");
@@ -53,29 +53,36 @@ public class Main {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<PhoneBook> p = new ArrayList<PhoneBook>();
+        ArrayList<PhoneBook> p = new ArrayList<>();
         char op;
         do {
             printTela();
             op = input.next().charAt(0);
-            if (op == 'n') {
-                System.out.println("Entre com o nome:");
-                String nome = input.next();
-                System.out.println("Entre com o telefone:");
-                String telefone = input.next();
-                p.add(new PhoneBook(nome, telefone));
-            } else if (op == 'd') {
-                System.out.println("Entre com o nome:");
-                String nome = input.next();
-                int index = containsName(p, nome);
-                if (index != -1) {
-                    p.remove(index);
-                    System.out.println("Registro removido");
-                } else {
-                    System.out.println("Este nome não está na lista telefonica");
-                }
-            } else if (op == 'p') {
-                printPhoneBook(p);
+            String nome;
+            switch (op) {
+                case 'n':
+                    System.out.println("Entre com o nome:");
+                    nome = input.next();
+                    System.out.println("Entre com o telefone:");
+                    String telefone = input.next();
+                    p.add(new PhoneBook(nome, telefone));
+                    break;
+                case 'd':
+                    System.out.println("Entre com o nome de contato que deseja deletar:");
+                    nome = input.next();
+                    int index = containsName(p, nome);
+                    if (index != -1) {
+                        p.remove(index);
+                        System.out.println("Registro removido");
+                    } else {
+                        System.out.println("Este nome não está na lista telefonica");
+                    }
+                    break;
+                case 'p':
+                    printPhoneBook(p);
+                    break;
+                default:
+                    break;
             }
         } while (op != 'q');
         input.close();

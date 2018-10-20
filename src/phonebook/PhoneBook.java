@@ -39,6 +39,6 @@ public class PhoneBook {
     public String getTelefone() {
         return telefone;
     }
-    private String nome;
-    private String telefone;
+    private final String nome;
+    private final String telefone;
 }
